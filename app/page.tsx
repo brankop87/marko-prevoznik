@@ -198,7 +198,7 @@ export default function Home() {
       <section className="mx-auto max-w-5xl px-4 pb-14">
         <h2 className="text-2xl font-extrabold">Gde radimo</h2>
         <p className="mt-2 text-white/75">
-          Cerovac i Smederevska Palanka, kao i okolina. Šire relacije po dogovoru — pozovite da proverimo dostupnost.
+          Cerovac i Smederevska Palanka, kao i okolina. Šire relacije po dogovoru, pozovite da proverimo dostupnost.
         </p>
 
         <div className="mt-6 rounded-3xl border border-white/10 bg-white/5 p-5">
@@ -206,7 +206,7 @@ export default function Home() {
             <div>
               <div className="text-base font-bold">Kontakt 0-24</div>
               <div className="mt-1 text-sm text-white/75">
-                Cene zavise od vrste vozila i relacije — pozovite za brzu procenu.
+                Cene zavise od vrste vozila i relacije - pozovite za brzu procenu.
               </div>
             </div>
 
