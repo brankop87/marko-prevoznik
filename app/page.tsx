@@ -142,7 +142,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="mt-4 text-xs text-white/60">
-                Cene zavise od vrste vozila i relacije — pozovite za brzu procenu.
+                Cene zavise od vrste vozila i relacije - pozovite za brzu procenu.
               </p>
             </div>
           </div>
