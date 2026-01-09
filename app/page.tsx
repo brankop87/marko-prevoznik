@@ -159,7 +159,7 @@ export default function Home() {
             { title: "Šlep pokvarenih vozila", desc: "Kada auto ne pali, ima kvar ili ne može da se kreće." },
             { title: "Prevoz prikolica i manjih vozila", desc: "Siguran transport do željene destinacije." },
             { title: "Prevoz do servisa / tehničkog", desc: "Preuzimanje i isporuka po dogovoru." },
-            { title: "Šire relacije po dogovoru", desc: "Cerovac, Palanka i šire — pozovite da proverimo dostupnost." },
+            { title: "Šire relacije po dogovoru", desc: "Cerovac, Palanka i šire, pozovite da proverimo dostupnost." },
           ].map((c) => (
             <div key={c.title} className="rounded-3xl border border-white/10 bg-white/5 p-5">
               <div className="flex items-start gap-3">
