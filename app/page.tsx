@@ -3,7 +3,12 @@ import Image from "next/image";
 const PHONE_RAW = "066006299";
 const PHONE_TEL = "+38166006299";
 
+<<<<<<< HEAD
 function viberLink(phone: string) {
+=======
+function viberLink() {
+  // Viber deep link (works best on mobile with Viber installed)
+>>>>>>> 54b28760805c0bdf34faaae99b154330a25306e9
   return `viber://chat?number=${PHONE_TEL.replace("+", "")}`;
 }
 
@@ -12,6 +17,8 @@ function whatsappLink(phoneE164: string) {
 }
 
 export default function Home() {
+  const year = new Date().getFullYear();
+
   return (
     <main className="min-h-screen">
       <header className="sticky top-0 z-40 border-b border-white/10 bg-black/60 backdrop-blur">
@@ -27,7 +34,11 @@ export default function Home() {
             />
             <div className="leading-tight">
               <div className="text-base font-semibold">Marko Prevoznik</div>
+<<<<<<< HEAD
               <div className="text-xs text-white/70">Slep sluzba 0-24</div>
+=======
+              <div className="text-xs text-white/70">Šlep služba 0-24</div>
+>>>>>>> 54b28760805c0bdf34faaae99b154330a25306e9
             </div>
           </div>
 
@@ -39,7 +50,7 @@ export default function Home() {
               Pozovi: {PHONE_RAW}
             </a>
             <a
-              href={viberLink(PHONE_TEL)}
+              href={viberLink()}
               className="rounded-xl border border-white/15 px-3 py-2 text-sm text-white/90 hover:bg-white/5"
             >
               Viber
@@ -59,6 +70,7 @@ export default function Home() {
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80">
               <span className="h-2 w-2 rounded-full bg-[rgb(var(--accent))]" />
+<<<<<<< HEAD
               Dostupno 0-24 • Sire po dogovoru
             </div>
 
@@ -73,6 +85,23 @@ export default function Home() {
             <p className="mt-5 text-base text-white/80">
               Prevoz pokvarenih automobila, prikolica i manjih vozila. Brz dogovor, siguran utovar i pouzdan
               transport do servisa ili zeljene lokacije.
+=======
+              Dostupno 0-24 • Šire po dogovoru
+            </div>
+
+            <h1 className="mt-4 text-3xl font-extrabold leading-tight sm:text-4xl">
+              Šlep služba i prevoz vozila{" "}
+              <span className="text-[rgb(var(--accent))]">0-24</span>
+            </h1>
+
+            <p className="mt-3 text-white/80">
+              Cerovac / Smederevska Palanka / okolina (šire po dogovoru)
+            </p>
+
+            <p className="mt-5 text-base text-white/80">
+              Prevoz pokvarenih automobila, prikolica i manjih vozila. Brz dogovor,
+              siguran utovar i pouzdan transport do servisa ili željene lokacije.
+>>>>>>> 54b28760805c0bdf34faaae99b154330a25306e9
             </p>
 
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
@@ -84,7 +113,7 @@ export default function Home() {
               </a>
               <div className="flex gap-3">
                 <a
-                  href={viberLink(PHONE_TEL)}
+                  href={viberLink()}
                   className="flex-1 rounded-2xl border border-white/15 px-5 py-4 text-center text-sm font-semibold text-white/90 hover:bg-white/5"
                 >
                   Posalji lokaciju (Viber)
@@ -110,7 +139,11 @@ export default function Home() {
               <div className="text-sm font-semibold text-white/90">Kontakt 0-24</div>
               <div className="mt-2 text-2xl font-extrabold text-[rgb(var(--accent))]">{PHONE_RAW}</div>
               <div className="mt-2 text-sm text-white/75">
+<<<<<<< HEAD
                 Cerovac / Smederevska Palanka • sire po dogovoru
+=======
+                Cerovac / Smederevska Palanka (šire po dogovoru)
+>>>>>>> 54b28760805c0bdf34faaae99b154330a25306e9
               </div>
               <div className="mt-5 grid gap-3">
                 <a
@@ -121,7 +154,7 @@ export default function Home() {
                 </a>
                 <div className="grid grid-cols-2 gap-3">
                   <a
-                    href={viberLink(PHONE_TEL)}
+                    href={viberLink()}
                     className="rounded-2xl border border-white/15 px-4 py-3 text-center text-sm font-semibold text-white/90 hover:bg-white/5"
                   >
                     Viber
@@ -148,6 +181,7 @@ export default function Home() {
 
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           {[
+<<<<<<< HEAD
             {
               title: "Slep pokvarenih vozila",
               desc: "Kada auto ne pali, ima kvar ili ne moze da se krece.",
@@ -164,11 +198,14 @@ export default function Home() {
               title: "Sire relacije po dogovoru",
               desc: "Cerovac, Palanka i sire - pozovite da proverimo dostupnost.",
             },
+=======
+            { title: "Šlep pokvarenih vozila", desc: "Kada auto ne pali, ima kvar ili ne može da se kreće." },
+            { title: "Prevoz prikolica i manjih vozila", desc: "Siguran transport do željene destinacije." },
+            { title: "Prevoz do servisa / tehničkog", desc: "Preuzimanje i isporuka po dogovoru." },
+            { title: "Šire relacije po dogovoru", desc: "Cerovac, Palanka i šire, pozovite da proverimo dostupnost." },
+>>>>>>> 54b28760805c0bdf34faaae99b154330a25306e9
           ].map((c) => (
-            <div
-              key={c.title}
-              className="rounded-3xl border border-white/10 bg-white/5 p-5"
-            >
+            <div key={c.title} className="rounded-3xl border border-white/10 bg-white/5 p-5">
               <div className="flex items-start gap-3">
                 <div className="mt-1 h-9 w-9 rounded-2xl bg-[rgb(var(--accent))]/20 ring-1 ring-white/10" />
                 <div>
@@ -186,6 +223,7 @@ export default function Home() {
           <h2 className="text-2xl font-extrabold">Kako ide dogovor</h2>
           <div className="mt-6 grid gap-4 md:grid-cols-3">
             {[
+<<<<<<< HEAD
               {
                 n: "1",
                 t: "Pozovete ili posaljete lokaciju",
@@ -201,11 +239,13 @@ export default function Home() {
                 t: "Dolazimo i vozimo sigurno do destinacije",
                 d: "Utovar i transport bez stresa.",
               },
+=======
+              { n: "1", t: "Pozovete ili pošaljete lokaciju", d: "Viber/WhatsApp ili direktan poziv." },
+              { n: "2", t: "Dogovorimo cenu i vreme dolaska", d: "Brza procena prema vozilu i relaciji." },
+              { n: "3", t: "Dolazimo i vozimo sigurno do destinacije", d: "Utovar i transport bez stresa." },
+>>>>>>> 54b28760805c0bdf34faaae99b154330a25306e9
             ].map((s) => (
-              <div
-                key={s.n}
-                className="rounded-3xl border border-white/10 bg-black/30 p-5"
-              >
+              <div key={s.n} className="rounded-3xl border border-white/10 bg-black/30 p-5">
                 <div className="text-sm text-white/70">Korak {s.n}</div>
                 <div className="mt-1 text-base font-bold">{s.t}</div>
                 <div className="mt-2 text-sm text-white/75">{s.d}</div>
@@ -218,7 +258,11 @@ export default function Home() {
       <section className="mx-auto max-w-5xl px-4 pb-14">
         <h2 className="text-2xl font-extrabold">Gde radimo</h2>
         <p className="mt-2 text-white/75">
+<<<<<<< HEAD
           Cerovac i Smederevska Palanka, kao i okolina. Sire relacije po dogovoru - pozovite da proverimo dostupnost.
+=======
+          Cerovac i Smederevska Palanka, kao i okolina. Šire relacije po dogovoru, pozovite da proverimo dostupnost.
+>>>>>>> 54b28760805c0bdf34faaae99b154330a25306e9
         </p>
 
         <div className="mt-6 rounded-3xl border border-white/10 bg-white/5 p-5">
@@ -239,7 +283,7 @@ export default function Home() {
               </a>
               <div className="grid grid-cols-2 gap-3">
                 <a
-                  href={viberLink(PHONE_TEL)}
+                  href={viberLink()}
                   className="rounded-2xl border border-white/15 px-4 py-3 text-center text-sm font-semibold text-white/90 hover:bg-white/5"
                 >
                   Viber
@@ -265,7 +309,7 @@ export default function Home() {
             Pozovi
           </a>
           <a
-            href={viberLink(PHONE_TEL)}
+            href={viberLink()}
             className="flex-1 rounded-2xl border border-white/15 bg-black/60 px-4 py-3 text-center text-sm font-bold text-white"
           >
             Viber
@@ -281,6 +325,7 @@ export default function Home() {
 
       <footer className="border-t border-white/10 bg-black/30 py-8">
         <div className="mx-auto max-w-5xl px-4 text-xs text-white/60">
+<<<<<<< HEAD
           © {new Date().getFullYear()} Marko Prevoznik - Slep sluzba 0-24 • Cerovac / Smederevska Palanka
         </div>
         <div className="mx-auto mt-4 flex max-w-5xl justify-start px-4">
@@ -292,6 +337,15 @@ export default function Home() {
           >
             Powered by Petkovic Solutions
           </a>
+=======
+          <div>
+            © {year} Marko Prevoznik - Šlep služba 0-24 - Cerovac / Smederevska Palanka
+          </div>
+          <div className="mt-2 text-[11px] text-white/45">
+            Powered by{" "}
+            <span className="font-semibold text-white/55">Petković Solutions</span>
+          </div>
+>>>>>>> 54b28760805c0bdf34faaae99b154330a25306e9
         </div>
       </footer>
     </main>

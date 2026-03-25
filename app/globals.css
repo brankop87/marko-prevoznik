@@ -14,4 +14,17 @@ html, body {
 body {
   color: rgb(var(--fg));
   background: rgb(var(--bg));
+  font-feature-settings: "kern" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* 🔥 FIX: uklanjamo razvučena slova globalno */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: normal !important;
+}
+
+/* Sitni tekst da ne deluje “razvučeno” */
+p, span, li {
+  letter-spacing: normal;
 }
