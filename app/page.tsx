@@ -4,7 +4,6 @@ const PHONE_RAW = "066006299";
 const PHONE_TEL = "+38166006299";
 
 function viberLink(phone: string) {
-  // Viber deep link (works best on mobile with Viber installed)
   return `viber://chat?number=${PHONE_TEL.replace("+", "")}`;
 }
 
@@ -15,11 +14,9 @@ function whatsappLink(phoneE164: string) {
 export default function Home() {
   return (
     <main className="min-h-screen">
-      {/* Header */}
       <header className="sticky top-0 z-40 border-b border-white/10 bg-black/60 backdrop-blur">
         <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3">
           <div className="flex items-center gap-3">
-            {/* NOTE: Replace logo-set.png with cropped logo.png later */}
             <Image
               src="/logo-set.png"
               alt="Marko Prevoznik logo"
@@ -30,7 +27,7 @@ export default function Home() {
             />
             <div className="leading-tight">
               <div className="text-base font-semibold">Marko Prevoznik</div>
-              <div className="text-xs text-white/70">Šlep služba 0–24</div>
+              <div className="text-xs text-white/70">Slep sluzba 0-24</div>
             </div>
           </div>
 
@@ -57,26 +54,25 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero */}
-      <section className="mx-auto max-w-5xl px-4 pt-10 pb-8">
+      <section className="mx-auto max-w-5xl px-4 pb-8 pt-10">
         <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80">
               <span className="h-2 w-2 rounded-full bg-[rgb(var(--accent))]" />
-              Dostupno 0–24 • Šire po dogovoru
+              Dostupno 0-24 • Sire po dogovoru
             </div>
 
             <h1 className="mt-4 text-3xl font-extrabold leading-tight sm:text-4xl">
-              Šlep služba i prevoz vozila <span className="text-[rgb(var(--accent))]">0–24</span>
+              Slep sluzba i prevoz vozila <span className="text-[rgb(var(--accent))]">0-24</span>
             </h1>
 
             <p className="mt-3 text-white/80">
-              Cerovac • Smederevska Palanka • okolina (šire po dogovoru)
+              Cerovac • Smederevska Palanka • okolina (sire po dogovoru)
             </p>
 
             <p className="mt-5 text-base text-white/80">
               Prevoz pokvarenih automobila, prikolica i manjih vozila. Brz dogovor, siguran utovar i pouzdan
-              transport do servisa ili željene lokacije.
+              transport do servisa ili zeljene lokacije.
             </p>
 
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
@@ -91,31 +87,30 @@ export default function Home() {
                   href={viberLink(PHONE_TEL)}
                   className="flex-1 rounded-2xl border border-white/15 px-5 py-4 text-center text-sm font-semibold text-white/90 hover:bg-white/5"
                 >
-                  Pošalji lokaciju (Viber)
+                  Posalji lokaciju (Viber)
                 </a>
                 <a
                   href={whatsappLink(PHONE_TEL)}
                   className="flex-1 rounded-2xl border border-white/15 px-5 py-4 text-center text-sm font-semibold text-white/90 hover:bg-white/5"
                 >
-                  Pošalji lokaciju (WhatsApp)
+                  Posalji lokaciju (WhatsApp)
                 </a>
               </div>
             </div>
 
             <div className="mt-6 flex flex-wrap gap-3 text-sm text-white/75">
-              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">✅ Brz dolazak</span>
-              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">✅ Siguran prevoz</span>
-              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">✅ Korektan dogovor</span>
+              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">Brz dolazak</span>
+              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">Siguran prevoz</span>
+              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">Korektan dogovor</span>
             </div>
           </div>
 
-          {/* Visual card */}
           <div className="rounded-3xl border border-white/10 bg-gradient-to-b from-white/10 to-white/5 p-6">
             <div className="rounded-2xl border border-white/10 bg-black/30 p-5">
-              <div className="text-sm font-semibold text-white/90">Kontakt 0–24</div>
+              <div className="text-sm font-semibold text-white/90">Kontakt 0-24</div>
               <div className="mt-2 text-2xl font-extrabold text-[rgb(var(--accent))]">{PHONE_RAW}</div>
               <div className="mt-2 text-sm text-white/75">
-                Cerovac / Smederevska Palanka • šire po dogovoru
+                Cerovac / Smederevska Palanka • sire po dogovoru
               </div>
               <div className="mt-5 grid gap-3">
                 <a
@@ -140,35 +135,34 @@ export default function Home() {
                 </div>
               </div>
               <p className="mt-4 text-xs text-white/60">
-                Cene zavise od vrste vozila i relacije — pozovite za brzu procenu.
+                Cene zavise od vrste vozila i relacije - pozovite za brzu procenu.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services */}
       <section className="mx-auto max-w-5xl px-4 py-10">
-        <h2 className="text-2xl font-extrabold">Šta radimo</h2>
+        <h2 className="text-2xl font-extrabold">Sta radimo</h2>
         <p className="mt-2 text-white/70">Jasno, brzo i bez komplikacija.</p>
 
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           {[
             {
-              title: "Šlep pokvarenih vozila",
-              desc: "Kada auto ne pali, ima kvar ili ne može da se kreće.",
+              title: "Slep pokvarenih vozila",
+              desc: "Kada auto ne pali, ima kvar ili ne moze da se krece.",
             },
             {
               title: "Prevoz prikolica i manjih vozila",
-              desc: "Siguran transport do željene destinacije.",
+              desc: "Siguran transport do zeljene destinacije.",
             },
             {
-              title: "Prevoz do servisa / tehničkog",
+              title: "Prevoz do servisa / tehnickog",
               desc: "Preuzimanje i isporuka po dogovoru.",
             },
             {
-              title: "Šire relacije po dogovoru",
-              desc: "Cerovac, Palanka i šire — pozovite da proverimo dostupnost.",
+              title: "Sire relacije po dogovoru",
+              desc: "Cerovac, Palanka i sire - pozovite da proverimo dostupnost.",
             },
           ].map((c) => (
             <div
@@ -187,7 +181,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How it works */}
       <section className="mx-auto max-w-5xl px-4 pb-10">
         <div className="rounded-3xl border border-white/10 bg-gradient-to-b from-white/10 to-white/5 p-6">
           <h2 className="text-2xl font-extrabold">Kako ide dogovor</h2>
@@ -195,7 +188,7 @@ export default function Home() {
             {[
               {
                 n: "1",
-                t: "Pozovete ili pošaljete lokaciju",
+                t: "Pozovete ili posaljete lokaciju",
                 d: "Viber/WhatsApp ili direktan poziv.",
               },
               {
@@ -222,19 +215,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Coverage */}
       <section className="mx-auto max-w-5xl px-4 pb-14">
         <h2 className="text-2xl font-extrabold">Gde radimo</h2>
         <p className="mt-2 text-white/75">
-          Cerovac i Smederevska Palanka, kao i okolina. Šire relacije po dogovoru — pozovite da proverimo dostupnost.
+          Cerovac i Smederevska Palanka, kao i okolina. Sire relacije po dogovoru - pozovite da proverimo dostupnost.
         </p>
 
         <div className="mt-6 rounded-3xl border border-white/10 bg-white/5 p-5">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <div className="text-base font-bold">Kontakt 0–24</div>
+              <div className="text-base font-bold">Kontakt 0-24</div>
               <div className="mt-1 text-sm text-white/75">
-                Cene zavise od vrste vozila i relacije — pozovite za brzu procenu.
+                Cene zavise od vrste vozila i relacije - pozovite za brzu procenu.
               </div>
             </div>
 
@@ -264,7 +256,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sticky mobile bar */}
       <div className="fixed bottom-3 left-0 right-0 z-50 sm:hidden">
         <div className="mx-auto flex max-w-md gap-2 px-3">
           <a
@@ -290,7 +281,17 @@ export default function Home() {
 
       <footer className="border-t border-white/10 bg-black/30 py-8">
         <div className="mx-auto max-w-5xl px-4 text-xs text-white/60">
-          © {new Date().getFullYear()} Marko Prevoznik — Šlep služba 0–24 • Cerovac / Smederevska Palanka
+          © {new Date().getFullYear()} Marko Prevoznik - Slep sluzba 0-24 • Cerovac / Smederevska Palanka
+        </div>
+        <div className="mx-auto mt-4 flex max-w-5xl justify-start px-4">
+          <a
+            href="https://petkovicsolutions.com"
+            target="_blank"
+            rel="noreferrer"
+            className="relative z-10 inline-flex rounded-md px-1 py-1 text-[11px] uppercase tracking-[0.22em] text-white/45 underline-offset-4 transition hover:text-white/70 hover:underline"
+          >
+            Powered by Petkovic Solutions
+          </a>
         </div>
       </footer>
     </main>
