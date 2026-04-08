@@ -1,19 +1,29 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
+import { defaultLocale, getSiteContent } from "@/site/content";
 
-export const metadata: Metadata = {
-  title: "Marko Prevoznik | Šlep služba 0-24 | Cerovac, Smederevska Palanka",
-  description:
-    "Šlep služba i prevoz vozila 0-24. Cerovac, Smederevska Palanka i okolina (šire po dogovoru). Pozovi 066006299.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const cookieStore = await cookies();
+  const locale = cookieStore.get("MARKO_LOCALE")?.value === "en" ? "en" : defaultLocale;
+  const content = getSiteContent(locale);
 
-export default function RootLayout({
+  return {
+    title: content.seo.title,
+    description: content.seo.description,
+  };
+}
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = await cookies();
+  const locale = cookieStore.get("MARKO_LOCALE")?.value === "en" ? "en" : defaultLocale;
+
   return (
-    <html lang="sr">
+    <html lang={locale}>
       <body>{children}</body>
     </html>
   );
