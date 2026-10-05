@@ -270,7 +270,9 @@ export function getSiteContent(locale: Locale): SiteContent {
 }
 
 export function viberLink(phoneTel: string) {
-  return `viber://chat?number=${phoneTel.replace("+", "")}`;
+  // Viberu treba pun medjunarodni broj SA "+" (enkodovan kao %2B);
+  // skidanje "+" je sprecavalo da se chat otvori.
+  return `viber://chat?number=${encodeURIComponent(phoneTel)}`;
 }
 
 export function whatsappLink(phoneTel: string) {
